@@ -1,0 +1,23 @@
+{
+  "name": "ashpaz",
+  "version": "1.0.0",
+  "description": "Ashapaz, project for database ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Javid-Izadfar/Ashpaz.git"
+  },
+  "author": "Javid Izadfar - Setareh Karimi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Javid-Izadfar/Ashpaz/issues"
+  },
+  "homepage": "https://github.com/Javid-Izadfar/Ashpaz#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-connect": "^4.1.0"
+  }
+}
