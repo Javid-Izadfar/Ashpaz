@@ -12,11 +12,18 @@
     });
   })
 
+  $('select').each(function(){
+  	$(this).select({
+      normalClasses: 'joqd red-text red-text-hover grey-lighten-3-hover',
+      activeClasses: 'joqd red-text red-text-hover grey-lighten-2 grey-lighten-2-hover'
+    });
+  })
+
   $('#isChefSwitchLabel').click(function(){
     if($('#isChef').prop('checked')){
-      $('#cater').parent().fadeIn();
+      $('#cater').parent().css('visibility', 'visible');
     } else {
-      $('#cater').parent().fadeOut();
+      $('#cater').parent().css('visibility', 'hidden');
     }
   })
 

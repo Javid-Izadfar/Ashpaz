@@ -10,8 +10,12 @@
   margin-top: 62px;
   height: 440px;}
 
-#signInForm{
-  margin-top: -250px;
+#pageBanner{
+  margin-top: 62px;
+  height: 240px;}
+
+#formWrapper{
+  margin-top: -100px;
   padding: 12px 24px !important;
   -webkit-box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),
                       0 2px 10px 0 rgba(0,0,0,0.12);
@@ -20,24 +24,24 @@
           box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),
                       0 2px 10px 0 rgba(0,0,0,0.12);}
 
-#signInForm input[type="submit"]{
+#formWrapper input[type="submit"]{
   margin-right: 45px;
   width: calc(100% - 45px);}
 
-#signInForm  .switch-field p{
+#formWrapper .switch-field p{
   margin-bottom: 0px;
   display: inline-block;}
 
-#signInForm  .switch-field p i.gorbeh_room_service{
+#formWrapper  .switch-field p i.gorbeh_room_service{
   font-size: 30px;
   width: 45px;}
 
-#signInForm .switch-field label.joqd.switch{
+#formWrapper .switch-field label.joqd.switch{
   display: inline-block;
   float: left;}
 
-#signInForm .switch-field  label.joqd.switch input:checked + .joqd.lever .joqd.trigger{background-color: #f44336;}
-#signInForm .switch-field  label.joqd.switch input:checked + .joqd.lever {background-color: #e57373;}
+#formWrapper .switch-field  label.joqd.switch input:checked + .joqd.lever .joqd.trigger{background-color: #f44336;}
+#formWrapper .switch-field  label.joqd.switch input:checked + .joqd.lever {background-color: #e57373;}
 
 #alreadySignedUp{
   font-size: 12px;
@@ -53,7 +57,15 @@
   text-shadow: 0px 0px 5px rgba(156, 156, 156, 0.7);
   margin-right: 24px;}
 
+footer{margin-top: 25px}
+
 footer a{
   font-size: 16px;
-  padding-left: 36px;
-}
+  padding-left: 36px;}
+
+.custom-input .joqd.input-field .joqd.prefix{right: 12px !important;}
+.custom-input .joqd.input-field .joqd.prefix ~ label{left: 57px !important;}
+.custom-input .joqd.input-field .joqd.caret{left: 12px !important}
+
+.input-field.alaki{height: 80px}
+.input-field.isChef{padding-top: 25px;}
