@@ -63,9 +63,72 @@ footer a{
   font-size: 16px;
   padding-left: 36px;}
 
+.shadowed{
+
+  -webkit-box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),
+                      0 2px 10px 0 rgba(0,0,0,0.12);
+     -moz-box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),
+                      0 2px 10px 0 rgba(0,0,0,0.12);
+          box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),
+                      0 2px 10px 0 rgba(0,0,0,0.12);}
+
+}
+
+
+/*SignUp*/
 .custom-input .joqd.input-field .joqd.prefix{right: 12px !important;}
 .custom-input .joqd.input-field .joqd.prefix ~ label{left: 57px !important;}
 .custom-input .joqd.input-field .joqd.caret{left: 12px !important}
 
 .input-field.alaki{height: 80px}
 .input-field.isChef{padding-top: 25px;}
+
+/*User*/
+main#user{margin-top: 62px}
+
+#profileWrapper{padding: 12px}
+
+#profilePicWrapper{
+  float: right;
+  width: 20%;}
+#profileAboutWrapper{
+  float: right;
+  width: 80%}
+
+#profileAboutWrapper h1,
+#profileAboutWrapper p{padding: 0px 25px 0px 12px}
+
+#makeNewPost form > div{padding: 0px 24px 12px 24px;}
+
+.upload{
+  padding-top: 20px;
+  float: right;}
+
+.upload label{
+  cursor: pointer;
+  font-size: 26px;
+  padding: 12px}
+
+.upload input{
+  width: 0px;
+  visibility: hidden}
+
+#submit{
+  float: left;
+  margin-top: 20px}
+
+#timeline .post h4{margin-top: 12px;}
+
+#timeline .post p{text-indent: 20px;}
+
+#timeline .post:not(:first-child){margin-top: 24px;}
+
+#timeline .post.image-post h4{
+  position: absolute;
+  top: 12px; right: 0px;
+  background: rgba(0, 0, 0, 0.63) none repeat scroll 0% 0%;
+  margin: 0px;
+  padding: 18px 12px 18px 36px;
+  color: white;
+  max-width: 100%;
+}
