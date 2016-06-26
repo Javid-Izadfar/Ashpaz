@@ -1,3 +1,7 @@
+<?php
+
+	session_start();
+?>
 <!DOCTYPE html>
 <html lang="fa">
 	<head>
@@ -112,35 +116,35 @@
       <!-- Form -->
       <div class="joqd row">
         <div id="formWrapper" class="joqd white soft-corner desktop-10 desktop-push-1 custom-input">
-          <form method="" action="" class="joqd row">
+          <form method="post" action="sign-up.php" class="joqd row">
 
             <div class="joqd input-field desktop-6 laptop-6 tablet-6 mobile-12">
               <i class="joqd prefix grey-text gorbeh gorbeh_perm_identity"></i>
-              <input id="fname" type="text" class="joqd input thin-bottom-border grey-border">
+              <input id="fname"type="text" name="name" class="joqd input thin-bottom-border grey-border">
               <label for="fname" class="joqd grey-text">نام</label>
             </div>
 
             <div class="joqd input-field desktop-6 laptop-6 tablet-6 mobile-12">
               <i class="joqd prefix grey-text gorbeh gorbeh_person"></i>
-              <input id="lname" type="text" class="joqd input thin-bottom-border grey-border">
+              <input id="lname" type="text" name="family" class="joqd input thin-bottom-border grey-border">
               <label for="lname" class="joqd grey-text">نام خانوادگی</label>
             </div>
 
             <div class="joqd input-field desktop-6 laptop-6 tablet-6 mobile-12">
               <i class="joqd prefix grey-text gorbeh gorbeh_streetview"></i>
-              <input id="username" type="text" class="joqd input thin-bottom-border grey-border">
+              <input id="username" type="text" name="usr" class="joqd input thin-bottom-border grey-border">
               <label for="username" class="joqd grey-text">نام کاربری</label>
             </div>
 
             <div class="joqd input-field desktop-6 laptop-6 tablet-6 mobile-12">
               <i class="joqd prefix grey-text gorbeh gorbeh_mail_outline"></i>
-              <input id="email" type="email" class="joqd input thin-bottom-border grey-border">
+              <input id="email" type="email" name="email" class="joqd input thin-bottom-border grey-border">
               <label for="email" class="joqd grey-text">ایمیل</label>
             </div>
 
             <div class="joqd input-field desktop-6 laptop-6 tablet-6 mobile-12">
               <i class="joqd prefix grey-text gorbeh gorbeh_lock_outline"></i>
-              <input id="password" type="password" class="joqd input thin-bottom-border grey-border">
+              <input id="password" type="password" name="psw" class="joqd input thin-bottom-border grey-border">
               <label for="password" class="joqd grey-text">رمز عبور</label>
             </div>
 
@@ -148,25 +152,15 @@
 
             <div class="joqd switch-field isChef desktop-6 laptop-6 tablet-6 mobile-12">
               <p class="joqd grey-text"><i class="gorbeh gorbeh_room_service"></i> آشپز هستید؟</p>
-              <label for="isChef" id="isChefSwitchLabel" class="joqd grey-text switch">
-                خیر
-                <input id="isChef" type="checkbox">
-                <div class="joqd lever round-corner grey-lighten-1">
-                  <div class="joqd trigger grey-darken-1 circle-corner"></div>
-                </div>
-                بله
+              <input id="cater" type="text" name="catering_name" class="joqd input thin-bottom-border grey-border">
+              <label for="cater" class="joqd grey-text">نام کیترینگ</label>
+             
               </label>
             </div>
-
-            <div class="joqd input-field desktop-6 laptop-6 tablet-6 mobile-12" style="visibility: hidden;">
-              <i class="joqd prefix grey-text gorbeh gorbeh_restaurant"></i>
-              <input id="cater" type="text" class="joqd input thin-bottom-border grey-border">
-              <label for="cater" class="joqd grey-text">نام کیترینگ</label>
-            </div>
-
+      
             <div class="joqd input-field desktop-6 laptop-6 tablet-6 mobile-12">
               <i class="joqd prefix grey-text gorbeh gorbeh_terrain"></i>
-              <select id="state" class="joqd input thin-bottom-border grey-border">
+              <select id="state" name="state_code"class="joqd input thin-bottom-border grey-border">
                 <option value="0" class="joqd" disabled>استان محل زندگی خود را مشخص کنید</option>
                 <option value="1" class="joqd" selected>تهران</option>
                 <option value="2" class="joqd">اصفهان</option>
@@ -177,12 +171,14 @@
 
             <div class="joqd input-field desktop-6 laptop-6 tablet-6 mobile-12">
               <i class="joqd prefix grey-text gorbeh gorbeh_location_city"></i>
-              <select id="city" class="joqd input thin-bottom-border grey-border">
-                <option value="00" class="joqd" disabled>شهر محل زندگی خود را مشخص کنید</option>
-                <option value="01" class="joqd" selected>تهران</option>
-                <option value="02" class="joqd">پردیس</option>
-                <option value="03" class="joqd">دماوند</option>
-                <option value="04" class="joqd">شهرری</option>
+              <select id="city" name="city_code" class="joqd input thin-bottom-border grey-border">
+                <option value="0" class="joqd" disabled>شهر محل زندگی خود را مشخص کنید</option>
+                <option value="1" class="joqd" selected>تهران</option>
+                <option value="2" class="joqd">پردیس</option>
+                <option value="3" class="joqd">دماوند</option>
+                <option value="4" class="joqd">شهرری</option>
+                <option value="4" class="joqd">اصفهان</option>
+                <option value="5" class="joqd">چادگان</option>
                 <!-- <option value="11" class="joqd">اصفهان</option>
                 <option value="12" class="joqd">کاشان</option>
                 <option value="13" class="joqd">گلپایگان</option> -->
@@ -193,27 +189,29 @@
 
             <div class="joqd input-field desktop-6 laptop-6 tablet-6 mobile-12">
               <i class="joqd prefix grey-text gorbeh gorbeh_my_location"></i>
-              <input id="localAddress" type="text" class="joqd input thin-bottom-border grey-border">
+              <input id="localAddress" name="address" type="text" class="joqd input thin-bottom-border grey-border">
               <label for="localAddress" class="joqd grey-text">آدرس محلی</label>
             </div>
 
             <div class="joqd input-field desktop-6 laptop-6 tablet-6 mobile-12">
               <i class="joqd prefix grey-text gorbeh gorbeh_markunread_mailbox"></i>
-              <input id="postalCode" type="number" class="joqd input thin-bottom-border grey-border">
+              <input id="postalCode" type="number" name="p_code" class="joqd input thin-bottom-border grey-border">
               <label for="postalCode" class="joqd grey-text">کد پستی</label>
             </div>
 
             <div class="joqd input-field desktop-6 laptop-6 tablet-6 mobile-12">
               <i class="joqd prefix grey-text gorbeh gorbeh_local_phone"></i>
-              <input id="phoneNumber" type="number" class="joqd input thin-bottom-border grey-border">
+              <input id="phoneNumber" type="number" name="phonenumber" class="joqd input thin-bottom-border grey-border">
               <label for="phoneNumber" class="joqd grey-text">شماره تماس</label>
             </div>
 
             <div class="joqd input-field alaki desktop-6 laptop-6 tablet-6 mobile-12"></div>
 
-            <div class="joqd input-field desktop-6 desktop-push-3 laptop-6 laptop-push-3 tablet-6 tablet-push-3 mobile-12 align-center">
-              <input type="submit" name="submit" value="ثبت نام" class="joqd green large soft-corner no-border flat button">
+            <div class="joqd input-field desktop-6  laptop-6 laptop-push-3 tablet-6 tablet-push-3 mobile-12 align-center">
+              <input type="submit" name="sign_up" value="ثبت نام" class="joqd green large soft-corner no-border flat button">
             </div>
+
+            <?php require 'insert_user.php'; ?>
           </form>
 
         </div>

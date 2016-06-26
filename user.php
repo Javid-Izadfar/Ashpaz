@@ -113,7 +113,7 @@
 			<section id="profile-content" class="joqd row">
 
 				<div id="makeNewPost" class="joqd desktop-4">
-					<form method="" action="" class="joqd row white shadowed no-padding soft-corner">
+					<form method="post" action="" class="joqd row white shadowed no-padding soft-corner">
 						<div class="joqd desktop-12 laptop-12 tablet-12 mobile-12">
 
 							<div class="joqd input-field">
