@@ -76,9 +76,9 @@ footer a{
 
 
 /*SignUp*/
-.custom-input .joqd.input-field .joqd.prefix{right: 12px !important;}
-.custom-input .joqd.input-field .joqd.prefix ~ label{left: 57px !important;}
-.custom-input .joqd.input-field .joqd.caret{left: 12px !important}
+#formWrapper .input-field .prefix{right: 12px !important;}
+#formWrapper .joqd.input-field .joqd.prefix ~ label{left: 57px !important;}
+#formWrapper .joqd.input-field .joqd.caret{left: 12px !important}
 
 .input-field.alaki{height: 80px}
 .input-field.isChef{padding-top: 25px;}
@@ -88,15 +88,7 @@ main#user{margin-top: 62px}
 
 #profileWrapper{padding: 12px}
 
-#profilePicWrapper{
-  float: right;
-  width: 20%;}
-#profileAboutWrapper{
-  float: right;
-  width: 80%}
-
-#profileAboutWrapper h1,
-#profileAboutWrapper p{padding: 0px 25px 0px 12px}
+#profileWrapper h1{margin-top: 10px;}
 
 #makeNewPost form > div{padding: 0px 24px 12px 24px;}
 
