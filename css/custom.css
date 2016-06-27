@@ -145,4 +145,16 @@ footer a{
   padding-right:20px;}
 
 #menuWrapper table tr:nth-child(odd) {background: #EEE}
-#menuWrapper table tr:first-child{background: transparent}
+#menuWrapper table tr:first-child{background: transparent;}
+
+#menuWrapper .joqd.checkbox-field{margin-top: 0px !important;}
+
+#menuWrapper .joqd.checkbox + label{
+  width: 20px;
+  height: 20px;}
+
+#menuWrapper .joqd.checkbox:checked + label .box{
+	border-color: #f44336; /* کد رنگ قرمز به هگزادسیمال */
+}
+
+input[type=number]:disabled{opacity: 60%;}

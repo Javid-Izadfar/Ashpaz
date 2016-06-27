@@ -104,58 +104,266 @@
 		<main id="menu" class="joqd container">
 
 			<section id="menuWrapper" class="joqd row">
-				<div class="joqd desktop-12 white shadowed soft-corner">
-					<h1>منوی غذاهای <a href="user.html" class="joqd link red-text red-darken-1-text-hover">گوردون رمزی</a></h1>
-					<hr class="joqd thin-hr grey-lighten-2" />
-					<table cellspacing="0">
-						<tr class="joqd grey-darken-4-text">
-							<th>نام</th>
-							<th>نوع</th>
-							<th>قیمت</th>
-						</tr>
-						<tr class="joqd grey-darken-1-text">
-							<td>مورل شکم‌پر</td>
-							<td>پیش‌غذا</td>
-							<td>۲۵۰٫۰۰۰ ریال</td>
-						</tr>
-						<tr class="joqd grey-darken-1-text">
-							<td>اسکیت کورنیش بو داده</td>
-							<td>پیش‌غذا</td>
-							<td>۲۰۰٫۰۰۰ ریال</td>
-						</tr>
-						<tr class="joqd grey-darken-1-text">
-							<td>سوپ</td>
-							<td>پیش‌غذا</td>
-							<td>۲۰۰٫۰۰۰ ریال</td>
-						</tr>
-						<tr class="joqd grey-darken-1-text">
-							<td>کبوتر بریان</td>
-							<td>پیش‌غذا</td>
-							<td>۳۰۰٫۰۰۰ ریال</td>
-						</tr>
-						<tr class="joqd grey-darken-1-text">
-							<td>قزل‌آلای دریایی با لیمو</td>
-							<td>غذای اصلی</td>
-							<td>۵۰۰٫۰۰۰ ریال</td>
-						</tr>
-						<tr class="joqd grey-darken-1-text">
-							<td>آنیولوتی</td>
-							<td>غذای اصلی</td>
-							<td>۲۰۰٫۰۰۰ ریال</td>
-						</tr>
-						<tr class="joqd grey-darken-1-text">
-							<td>راویولی</td>
-							<td>غذای اصلی</td>
-							<td>۴۵۰٫۰۰۰ ریال</td>
-						</tr>
-						<tr class="joqd grey-darken-1-text">
-							<td>بره‌ی هردویک با سبزیجات</td>
-							<td>غذای اصلی</td>
-							<td>۱٫۰۰۰٫۰۰۰ ریال</td>
-						</tr>
 
-					</table>
-				</div>
+				<form class="joqd desktop-12 white shadowed no-padding soft-corner">
+					<div class="joqd desktop-4">
+						<h2>منو غذاهایت را تکمیل کن!</h2>
+					</div>
+					<div class="joqd desktop-3">
+						<div class="joqd input-field">
+					    <input id="foodName" type="text" class="joqd input thin-bottom-border grey-border">
+					    <label for="foodName" class="joqd grey-text">نام غذا</label>
+					  </div>
+					</div>
+					<div class="joqd desktop-2">
+						<div class="joqd input-field">
+					    <select id="foodCat" class="joqd input thin-bottom-border grey-border">
+					      <option value="0" class="joqd" disabled>نوع غذا</option>
+					      <option value="appetizer" class="joqd">پیش‌غذا</option>
+					      <option value="main" class="joqd">غذای اصلی</option>
+					      <option value="dessert" class="joqd">دسر</option>
+					    </select>
+					    <span class="joqd caret"></span>
+					    <label for="foodCat" class="joqd grey-text always-open-input">نوع غذا</label>
+					  </div>
+					</div>
+					<div class="joqd desktop-3">
+						<div class="joqd input-field">
+					    <input id="foodprice" type="number" class="joqd input thin-bottom-border grey-border">
+					    <label for="foodprice" class="joqd grey-text">قیمت غذا</label>
+					  </div>
+					</div>
+				</form>
+
+				<form action="">
+
+					<div id="selectFood" class="joqd desktop-12 white shadowed soft-corner"  style="margin-top: 24px;">
+						<h1>منوی غذاهای <a href="user.html" class="joqd link red-text red-darken-1-text-hover">گوردون رمزی</a></h1>
+						<hr class="joqd thin-hr grey-lighten-2" />
+						<table cellspacing="0">
+
+							<tr class="joqd grey-darken-4-text">
+								<th></th>
+								<th>نام</th>
+								<th>نوع</th>
+								<th>قیمت</th>
+								<th>تعداد</th>
+							</tr>
+
+							<tr class="joqd grey-darken-1-text">
+								<td>
+									<div class="joqd checkbox-field">
+									  <input id="check1" type="checkbox" class="joqd checkbox" />
+									  <label for="check1" class="joqd grey-darken-2-text">
+									    <span class="joqd box soft-corner thick-border grey-darken-3-border"></span>
+									  </label>
+									</div>
+								</td>
+								<td>مورل شکم‌پر</td>
+								<td>پیش‌غذا</td>
+								<td>۲۵۰٫۰۰۰ ریال</td>
+								<td>
+									<input type="number" name="quantity" min="0" class="joqd soft-corner thin-border grey-lighten-1-border white" disabled="true">
+								</td>
+							</tr>
+
+							<tr class="joqd grey-darken-1-text">
+								<td>
+									<div class="joqd checkbox-field">
+									  <input id="check2" type="checkbox" class="joqd checkbox" />
+									  <label for="check2" class="joqd grey-darken-2-text">
+									    <span class="joqd box soft-corner thick-border grey-darken-3-border"></span>
+									  </label>
+									</div>
+								</td>
+								<td>اسکیت کورنیش بو داده</td>
+								<td>پیش‌غذا</td>
+								<td>۲۰۰٫۰۰۰ ریال</td>
+								<td>
+									<input type="number" name="quantity" min="0" class="joqd soft-corner thin-border grey-lighten-1-border white" disabled="true">
+								</td>
+							</tr>
+
+							<tr class="joqd grey-darken-1-text">
+								<td>
+									<div class="joqd checkbox-field">
+									  <input id="check3" type="checkbox" class="joqd checkbox" />
+									  <label for="check3" class="joqd grey-darken-2-text">
+									    <span class="joqd box soft-corner thick-border grey-darken-3-border"></span>
+									  </label>
+									</div>
+								</td>
+								<td>سوپ</td>
+								<td>پیش‌غذا</td>
+								<td>۲۰۰٫۰۰۰ ریال</td>
+								<td>
+									<input type="number" name="quantity" min="0" class="joqd soft-corner thin-border grey-lighten-1-border white" disabled="true">
+								</td>
+							</tr>
+
+							<tr class="joqd grey-darken-1-text">
+								<td>
+									<div class="joqd checkbox-field">
+									  <input id="check4" type="checkbox" class="joqd checkbox" />
+									  <label for="check4" class="joqd grey-darken-2-text">
+									    <span class="joqd box soft-corner thick-border grey-darken-3-border"></span>
+									  </label>
+									</div>
+								</td>
+								<td>کبوتر بریان</td>
+								<td>پیش‌غذا</td>
+								<td>۳۰۰٫۰۰۰ ریال</td>
+								<td>
+									<input type="number" name="quantity" min="0" class="joqd soft-corner thin-border grey-lighten-1-border white" disabled="true">
+								</td>
+							</tr>
+
+							<tr class="joqd grey-darken-1-text">
+								<td>
+									<div class="joqd checkbox-field">
+									  <input id="check5" type="checkbox" class="joqd checkbox" />
+									  <label for="check5" class="joqd grey-darken-2-text">
+									    <span class="joqd box soft-corner thick-border grey-darken-3-border"></span>
+									  </label>
+									</div>
+								</td>
+								<td>قزل‌آلای دریایی با لیمو</td>
+								<td>غذای اصلی</td>
+								<td>۵۰۰٫۰۰۰ ریال</td>
+								<td>
+									<input type="number" name="quantity" min="0" class="joqd soft-corner thin-border grey-lighten-1-border white" disabled="true">
+								</td>
+							</tr>
+
+							<tr class="joqd grey-darken-1-text">
+								<td>
+									<div class="joqd checkbox-field">
+									  <input id="check6" type="checkbox" class="joqd checkbox" />
+									  <label for="check6" class="joqd grey-darken-2-text">
+									    <span class="joqd box soft-corner thick-border grey-darken-3-border"></span>
+									  </label>
+									</div>
+								</td>
+								<td>آنیولوتی</td>
+								<td>غذای اصلی</td>
+								<td>۲۰۰٫۰۰۰ ریال</td>
+								<td>
+									<input type="number" name="quantity" min="0" class="joqd soft-corner thin-border grey-lighten-1-border white" disabled="true">
+								</td>
+							</tr>
+
+							<tr class="joqd grey-darken-1-text">
+								<td>
+									<div class="joqd checkbox-field">
+									  <input id="check7" type="checkbox" class="joqd checkbox" />
+									  <label for="check7" class="joqd grey-darken-2-text">
+									    <span class="joqd box soft-corner thick-border grey-darken-3-border"></span>
+									  </label>
+									</div>
+								</td>
+								<td>راویولی</td>
+								<td>غذای اصلی</td>
+								<td>۴۵۰٫۰۰۰ ریال</td>
+								<td>
+									<input type="number" name="quantity" min="0" class="joqd soft-corner thin-border grey-lighten-1-border white" disabled="true">
+								</td>
+							</tr>
+
+							<tr class="joqd grey-darken-1-text">
+								<td>
+									<div class="joqd checkbox-field">
+									  <input id="check8" type="checkbox" class="joqd checkbox" />
+									  <label for="check8" class="joqd grey-darken-2-text">
+									    <span class="joqd box soft-corner thick-border grey-darken-3-border"></span>
+									  </label>
+									</div>
+								</td>
+								<td>بره‌ی هردویک با سبزیجات</td>
+								<td>غذای اصلی</td>
+								<td>۱٫۰۰۰٫۰۰۰ ریال</td>
+								<td>
+									<input type="number" name="quantity" min="0" class="joqd soft-corner thin-border grey-lighten-1-border white" disabled="true">
+								</td>
+							</tr>
+
+							<tr class="joqd grey-darken-1-text">
+								<td>
+									<div class="joqd checkbox-field">
+									  <input id="check9" type="checkbox" class="joqd checkbox" />
+									  <label for="check9" class="joqd grey-darken-2-text">
+									    <span class="joqd box soft-corner thick-border grey-darken-3-border"></span>
+									  </label>
+									</div>
+								</td>
+								<td>تارت سیب کاراملی</td>
+								<td>دسر</td>
+								<td>۱۵۰٫۰۰۰ ریال</td>
+								<td>
+									<input type="number" name="quantity" min="0" class="joqd soft-corner thin-border grey-lighten-1-border white" disabled="true">
+								</td>
+							</tr>
+
+							<tr class="joqd grey-darken-1-text">
+								<td>
+									<div class="joqd checkbox-field">
+									  <input id="check10" type="checkbox" class="joqd checkbox" />
+									  <label for="check10" class="joqd grey-darken-2-text">
+									    <span class="joqd box soft-corner thick-border grey-darken-3-border"></span>
+									  </label>
+									</div>
+								</td>
+								<td>سوفله لیمو</td>
+								<td>دسر</td>
+								<td>۱۵۰٫۰۰۰ ریال</td>
+								<td>
+									<input type="number" name="quantity" min="0" class="joqd soft-corner thin-border grey-lighten-1-border white" disabled="true">
+								</td>
+							</tr>
+
+							<tr class="joqd grey-darken-1-text">
+								<td>
+									<div class="joqd checkbox-field">
+									  <input id="check11" type="checkbox" class="joqd checkbox" />
+									  <label for="check11" class="joqd grey-darken-2-text">
+									    <span class="joqd box soft-corner thick-border grey-darken-3-border"></span>
+									  </label>
+									</div>
+								</td>
+								<td>کارامل شیر شکلات</td>
+								<td>دسر</td>
+								<td>۱۸۰٫۰۰۰ ریال</td>
+								<td>
+									<input type="number" name="quantity" min="0" class="joqd soft-corner thin-border grey-lighten-1-border white" disabled="true">
+								</td>
+							</tr>
+
+							<tr class="joqd grey-darken-1-text">
+								<td>
+									<div class="joqd checkbox-field">
+									  <input id="check12" type="checkbox" class="joqd checkbox" />
+									  <label for="check12" class="joqd grey-darken-2-text">
+									    <span class="joqd box soft-corner thick-border grey-darken-3-border"></span>
+									  </label>
+									</div>
+								</td>
+								<td>چیزکیک فرانسوی</td>
+								<td>دسر</td>
+								<td>۲۱۰٫۰۰۰ ریال</td>
+								<td>
+									<input type="number" name="quantity" min="0" class="joqd soft-corner thin-border grey-lighten-1-border white" disabled="true">
+								</td>
+							</tr>
+
+						</table>
+					</div>
+
+					<div class="joqd desktop-12 white shadowed soft-corner align-center"  style="margin-top: 24px;">
+						<p>تکمیل فرایند خرید</p>
+						<input type="submit" name="submit" value="خرید" class="joqd button green medium soft-corner no-border raised">
+					</div>
+
+				</form>
+
 			</section>
 
 		</main>

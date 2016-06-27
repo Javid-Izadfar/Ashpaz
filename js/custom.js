@@ -25,7 +25,22 @@
     } else {
       $('#cater').parent().css('visibility', 'hidden');
     }
+  });
+
+  $('#selectFood input[type=checkbox]').on('click', function() {
+    if($(this).is(':checked')){
+      $(this).parents('tr').find('input[type=number]').val(1).prop('disabled', false).toggleClass('grey-lighten-1-border red-lighten-1-border');
+    } else {
+      $(this).parents('tr').find('input[type=number]').val('').prop('disabled', true).toggleClass('red-lighten-1-border grey-lighten-1-border');
+    }
   })
+
+  $('#selectFood input[type=number]').bind('keyup mouseup', function () {
+    if ($(this).val() == 0) {
+      $(this).val('').prop('disabled', true).toggleClass('red-lighten-1-border grey-lighten-1-border');
+      $(this).parents('tr').find('input[type=checkbox]').prop( "checked", false )
+    }
+  });
 
 
 }( jQuery ));
