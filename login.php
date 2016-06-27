@@ -11,8 +11,8 @@
     }
 
 	$dbhost = "localhost";
-	$dbuser = "AshpazBashi";
-	$dbpass = "1234";
+	$dbuser = "database_p";
+	$dbpass = "123456";
 	$dbname = "ashpaz";
 	$conn = mysqli_connect($dbhost, $dbuser, $dbpass,$dbname) or die("connection was not established");
 	$message = " ";
