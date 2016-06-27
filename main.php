@@ -12,7 +12,7 @@
 				<!-- SignUp Form -->
 				<div id="formWrapper" class="joqd soft-corner white desktop-4 desktop-push-1">
 					<h2>وارد شوید</h2>
-					<form method="post" action="main.php">
+					<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
 
 						<div class="joqd input-field">
 							<i class="joqd prefix grey-text gorbeh gorbeh_streetview"></i>

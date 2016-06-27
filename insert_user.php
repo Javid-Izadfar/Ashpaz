@@ -1,5 +1,4 @@
 <?php
-
 	$dbhost = "localhost";
 	$dbuser = "database_p";
 	$dbpass = "123456";
@@ -133,7 +132,7 @@
 			$run_insert = mysqli_query($conn, $insert);
 
 			if($run_insert){
-				//$_SESSION['email'] = $email;
+				$_SESSION['email'] = $email;
 				echo "inserted";
 				echo $message;
 				exit();
