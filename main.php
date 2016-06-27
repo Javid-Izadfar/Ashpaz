@@ -33,7 +33,7 @@
 					</form>
 					<?php require 'login.php'; ?>
 
-					<p id="alreadySignedUp">در آشپز عضو نیستید؟ <a href="sign-up.html" class="joqd link red-text red-darken-2-text-hover">عضو شوید</a>!</p>
+					<p id="alreadySignedUp">در آشپز عضو نیستید؟ <a href="sign-up.php" class="joqd link red-text red-darken-2-text-hover">عضو شوید</a>!</p>
 				</div>
 				<!-- /SignUp Form -->
 

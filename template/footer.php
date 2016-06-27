@@ -13,10 +13,10 @@
 		<script src="http://code.jquery.com/jquery-latest.min.js"></script>
 
 		<!-- Joqd Core js -->
-		<script src="js/joqd.min.js"></script>
+		<script src="http://localhost:8088/Ashpaz/js/joqd.min.js"></script>
 
     <!-- Custom js -->
-		<script src="js/custom.js"></script>
+		<script src="http://localhost:8088/Ashpaz/js/custom.js"></script>
 
 	</body>
 </html>

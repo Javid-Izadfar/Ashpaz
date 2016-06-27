@@ -19,6 +19,7 @@
 
 		<!-- Custom CSS -->
 		<link href="css/custom.css" rel="stylesheet">
+
 	</head>
 	<body class="joqd grey-lighten-5">
 
@@ -36,7 +37,7 @@
 
 			    <!-- Logo -->
 			    <div class="joqd logo">
-			      <a href="index.html" class="joqd link white-text">
+			      <a href="index.php" class="joqd link white-text">
 			        <img src="img/ashpaz-logo.png" alt="آشپز">
 			      </a>
 			    </div>

@@ -1,27 +1,25 @@
 <?php
 
-	if(!isset($_SESSION)) 
-    { 
-        session_start(); 
+	if(!isset($_SESSION))
+    {
+        session_start();
     }
     else
     {
         session_destroy();
-        session_start(); 
+        session_start();
     }
 
 	$dbhost = "localhost";
-	$dbuser = "AshpazBashi";
-	$dbpass = "1234";
+	$dbuser = "database_p";
+	$dbpass = "123456";
 	$dbname = "ashpaz";
 	$conn = mysqli_connect($dbhost, $dbuser, $dbpass,$dbname) or die("connection was not established");
 	$message = " ";
 
 
-
-
 if (isset($_POST['login'])) {
-	
+
 	if (isset($_POST['email']) && !empty($_POST['email'])) {
 
 		$email = mysqli_real_escape_string($conn, $_POST['email']);
@@ -45,7 +43,7 @@ if (isset($_POST['login'])) {
 
 
 	if ($check==1) {
-		
+
 		$_SESSION['email']=$email;
 		echo "yes yes";
 

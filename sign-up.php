@@ -3,8 +3,9 @@
 
 
 	require 'template/header.php';
-?>
 
+
+?>
 
 		<main class="joqd narrow-container">
       <!-- Banner -->
@@ -18,7 +19,7 @@
       <!-- Form -->
       <div class="joqd row">
         <div id="formWrapper" class="joqd white soft-corner desktop-10 desktop-push-1 custom-input">
-          <form method="post" action="sign-up.php" class="joqd row">
+          <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" class="joqd row">
 
             <div class="joqd input-field desktop-6 laptop-6 tablet-6 mobile-12">
               <i class="joqd prefix grey-text gorbeh gorbeh_perm_identity"></i>
@@ -52,14 +53,24 @@
 
             <div class="joqd input-field alaki desktop-6 laptop-6 tablet-6 mobile-12"></div>
 
-            <div class="joqd switch-field isChef desktop-6 laptop-6 tablet-6 mobile-12">
+						<div class="joqd switch-field isChef desktop-6 laptop-6 tablet-6 mobile-12">
               <p class="joqd grey-text"><i class="gorbeh gorbeh_room_service"></i> آشپز هستید؟</p>
-              <input id="cater" type="text" name="catering_name" class="joqd input thin-bottom-border grey-border">
-              <label for="cater" class="joqd grey-text">نام کیترینگ</label>
-             
+              <label for="isChef" id="isChefSwitchLabel" class="joqd grey-text switch">
+                خیر
+                <input id="isChef" type="checkbox">
+                <div class="joqd lever round-corner grey-lighten-1">
+                  <div class="joqd trigger grey-darken-1 circle-corner"></div>
+                </div>
+                بله
               </label>
             </div>
-      
+
+            <div class="joqd input-field desktop-6 laptop-6 tablet-6 mobile-12" style="visibility: hidden;">
+              <i class="joqd prefix grey-text gorbeh gorbeh_restaurant"></i>
+              <input id="cater" type="text"  name="catering_name" class="joqd input thin-bottom-border grey-border">
+              <label for="cater" class="joqd grey-text">نام کیترینگ</label>
+            </div>
+
             <div class="joqd input-field desktop-6 laptop-6 tablet-6 mobile-12">
               <i class="joqd prefix grey-text gorbeh gorbeh_terrain"></i>
               <select id="state" name="state_code"class="joqd input thin-bottom-border grey-border">
