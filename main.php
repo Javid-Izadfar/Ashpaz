@@ -31,9 +31,11 @@
 						</div>
 
 					</form>
-					<?php require 'login.php'; ?>
+					<?php login(); ?>
 
-					<p id="alreadySignedUp">در آشپز عضو نیستید؟ <a href="sign-up.html" class="joqd link red-text red-darken-2-text-hover">عضو شوید</a>!</p>
+					<?php $address_link = "sign-up.php"; ?>
+
+					<p id="alreadySignedUp">در آشپز عضو نیستید؟ <a href="<?php echo $address_link; ?>" class="joqd link red-text red-darken-2-text-hover">عضو شوید</a>!</p>
 				</div>
 				<!-- /SignUp Form -->
 

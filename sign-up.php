@@ -1,7 +1,9 @@
 <?php
 ob_start();
 session_start();
-	require 'template/header.php';
+require 'functions/functions.php';
+
+require 'template/header.php';
 ?>
 
 
@@ -17,7 +19,7 @@ session_start();
       <!-- Form -->
       <div class="joqd row">
         <div id="formWrapper" class="joqd white soft-corner desktop-10 desktop-push-1 custom-input">
-          <form method="post" action="sign-up.php" class="joqd row">
+          <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" class="joqd row">
 
             <div class="joqd input-field desktop-6 laptop-6 tablet-6 mobile-12">
               <i class="joqd prefix grey-text gorbeh gorbeh_perm_identity"></i>
@@ -63,8 +65,7 @@ session_start();
               <i class="joqd prefix grey-text gorbeh gorbeh_terrain"></i>
               <select id="state" name="state_code"class="joqd input thin-bottom-border grey-border">
                 <option value="0" class="joqd" disabled>استان محل زندگی خود را مشخص کنید</option>
-                <option value="1" class="joqd" selected>تهران</option>
-                <option value="2" class="joqd">اصفهان</option>
+                <?php getState(); ?>
               </select>
               <span class="joqd caret"></span>
               <label for="state" class="joqd grey-text always-open-input">استان</label>
@@ -74,12 +75,7 @@ session_start();
               <i class="joqd prefix grey-text gorbeh gorbeh_location_city"></i>
               <select id="city" name="city_code" class="joqd input thin-bottom-border grey-border">
                 <option value="0" class="joqd" disabled>شهر محل زندگی خود را مشخص کنید</option>
-                <option value="1" class="joqd" selected>تهران</option>
-                <option value="2" class="joqd">پردیس</option>
-                <option value="3" class="joqd">دماوند</option>
-                <option value="4" class="joqd">شهرری</option>
-                <option value="4" class="joqd">اصفهان</option>
-                <option value="5" class="joqd">چادگان</option>
+                <?php getCity(); ?>
                 <!-- <option value="11" class="joqd">اصفهان</option>
                 <option value="12" class="joqd">کاشان</option>
                 <option value="13" class="joqd">گلپایگان</option> -->
@@ -112,7 +108,7 @@ session_start();
               <input type="submit" name="sign_up" value="ثبت نام" class="joqd green large soft-corner no-border flat button">
             </div>
 
-            <?php require 'insert_user.php'; ?>
+            <?php insertUser(); ?>
           </form>
 
         </div>

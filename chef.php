@@ -1,12 +1,10 @@
 <?php
-ob_start();
 session_start();
+
 require 'functions/functions.php';
 
 require 'template/header.php';
-
-require 'main.php';
-
+require 'chef/add_menu.php';
 require 'template/footer.php';
 
 

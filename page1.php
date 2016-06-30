@@ -1,9 +1,8 @@
 <html>
 <head>
-	<title></title>
+	<title>page1</title>
 </head>
 <body>
-	this is for test
 
 </body>
 </html>
